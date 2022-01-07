@@ -1,0 +1,1 @@
+#这是个SSM架构的项目，Spring+SpringMVC+MyBatis
