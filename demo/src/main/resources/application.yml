@@ -1,0 +1,14 @@
+server:
+  port: 8080
+person:
+  name: 老王
+  age: 100
+  gender: 女
+  hobbies:
+    - money
+    - study
+    - tech
+  last_name: 王
+spring:
+  profiles:
+    active: dev
