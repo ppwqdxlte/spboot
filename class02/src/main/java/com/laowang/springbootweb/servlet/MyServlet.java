@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+//请求 http://localhost:8080/ms可以测试listener，filter，servlet执行顺序
 @WebServlet(name = "myServlet",urlPatterns = "/ms")
 public class MyServlet extends HttpServlet {
     @Override

@@ -3,11 +3,13 @@ package com.laowang.springbootweb;
 import com.laowang.springbootweb.filter.MyFilter;
 import com.laowang.springbootweb.filter.MyFilter2;
 import com.laowang.springbootweb.filter.MyFilter3;
+import com.laowang.springbootweb.listener.MyListener;
 import com.laowang.springbootweb.servlet.MyServlet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
@@ -46,6 +48,14 @@ public class Class02Application {
     public FilterRegistrationBean<MyFilter3> getFilterRegistrationBean3(){
         FilterRegistrationBean<MyFilter3> registrationBean = new FilterRegistrationBean<>(new MyFilter3());
         registrationBean.setOrder(2);
+        return registrationBean;
+    }
+
+    @Bean
+    public ServletListenerRegistrationBean<MyListener> getMyListenerRegistoryBean(){
+        ServletListenerRegistrationBean<MyListener> registrationBean = new ServletListenerRegistrationBean<>(new MyListener());
+        registrationBean.setOrder(1);
+        System.out.println("MyListener");
         return registrationBean;
     }
 
