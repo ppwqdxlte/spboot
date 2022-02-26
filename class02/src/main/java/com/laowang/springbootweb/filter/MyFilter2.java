@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebFilter(filterName = "myFilter",urlPatterns = "/*")
-//@Order(1)  这个设置不能决定过滤顺序
-public class MyFilter extends HttpFilter {
+@WebFilter(filterName = "myFilter2",urlPatterns = "/*")
+//@Order(3)
+public class MyFilter2 extends HttpFilter {
     @Override
     protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {
         System.out.println(this.getFilterName()+"---doFilter()>>>");
