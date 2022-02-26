@@ -1,8 +1,5 @@
 package com.laowang.springbootweb.servlet;
 
-import org.springframework.web.context.support.HttpRequestHandlerServlet;
-
-import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
