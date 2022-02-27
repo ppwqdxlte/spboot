@@ -3,18 +3,14 @@ package com.laowang.springbootweb;
 import com.laowang.springbootweb.filter.MyFilter;
 import com.laowang.springbootweb.filter.MyFilter2;
 import com.laowang.springbootweb.filter.MyFilter3;
-import com.laowang.springbootweb.listener.MyListener;
-import com.laowang.springbootweb.servlet.MyServlet;
+import com.laowang.springbootweb.listener.MyHttpSessionListener;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-
-import javax.servlet.http.HttpFilter;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "com.laowang")
@@ -61,11 +57,12 @@ public class Class02Application {
     }
 
     @Bean
-    public ServletListenerRegistrationBean<MyListener> getMyListenerRegistoryBean(){
-        ServletListenerRegistrationBean<MyListener> registrationBean = new ServletListenerRegistrationBean<>(new MyListener());
-        registrationBean.setOrder(1);
+    public ServletListenerRegistrationBean<MyHttpSessionListener> getMyListenerRegistoryBean(){
+        ServletListenerRegistrationBean<MyHttpSessionListener> registrationBean = new ServletListenerRegistrationBean<>();
+        registrationBean.setListener(new MyHttpSessionListener());
         System.out.println("MyListener");
         return registrationBean;
     }
+
 
 }
