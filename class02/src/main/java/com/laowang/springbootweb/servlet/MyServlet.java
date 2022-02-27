@@ -1,8 +1,5 @@
 package com.laowang.springbootweb.servlet;
 
-import org.springframework.web.context.support.HttpRequestHandlerServlet;
-
-import javax.servlet.Servlet;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -10,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+// http://localhost:8080/ms
 @WebServlet(name = "myServlet",urlPatterns = "/ms")
 public class MyServlet extends HttpServlet {
     @Override
@@ -22,6 +20,7 @@ public class MyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println(this.getServletName()+"---doGet()>>>");
         super.doGet(req, resp);
+        System.out.println(this.getServletName()+"---完成处理");
     }
 
     @Override
