@@ -21,4 +21,11 @@ public class HelloRestController {
     public String hello2(){
         return "Hello2!!";
     }
+
+    // http://localhost:8080/success
+    //请求到的也只是字符串"success"，并没走视图控制器ViewController!
+    @RequestMapping("/success")
+    public String success(){
+        return "success";
+    }
 }
