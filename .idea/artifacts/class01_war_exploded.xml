@@ -5,7 +5,7 @@
       <element id="javaee-facet-resources" facet="class01/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="class01" />
+          <element id="module-output" name="not-work" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: .org.springframework:spring-jdbc:4.3.8.RELEASE" />
