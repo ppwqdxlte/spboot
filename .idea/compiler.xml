@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot-web" />
-        <module name="demo" />
         <module name="not-work" />
+        <module name="springboot-data" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -16,6 +17,7 @@
       <module name="demo" target="11" />
       <module name="not-work" target="15" />
       <module name="spboot" target="15" />
+      <module name="springboot-data" target="11" />
       <module name="springboot-web" target="11" />
     </bytecodeTargetLevel>
   </component>
@@ -23,6 +25,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="class02" options="-parameters" />
       <module name="demo" options="-parameters" />
+      <module name="springboot-data" options="-parameters" />
       <module name="springboot-web" options="-parameters" />
     </option>
   </component>
